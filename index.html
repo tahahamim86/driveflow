@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DriveFlow — Le logiciel de gestion pour auto-écoles</title>
+<meta name="description" content="DriveFlow centralise planning, véhicules, élèves, examens et paiements de votre auto-école. Téléchargez le logiciel pour Windows.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <!-- Remplacez ce bloc par : <img src="logo.png" alt="DriveFlow" class="logo-img"> -->
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="12" cy="12" r="3" fill="currentColor"/>
+          <path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </span>
+      Auto École <span class="logo-accent">DriveFlow</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="#comment-ca-marche">Installation</a>
+      <a href="#telecharger">Télécharger</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#telecharger" class="btn btn-primary btn-nav">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Télécharger
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">LOGICIEL DE GESTION POUR AUTO-ÉCOLES</p>
+        <h1>Prenez le volant<br>de votre <span class="hl">auto-école.</span></h1>
+        <p class="hero-sub">
+          Élèves, moniteurs, véhicules, examens, paiements et planning : DriveFlow
+          réunit toute la gestion de votre auto-école dans un seul centre de
+          commandement, installé sur votre ordinateur.
+        </p>
+        <div class="hero-actions">
+          <a href="#telecharger" class="btn btn-primary btn-lg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Télécharger pour Windows
+          </a>
+          <a href="#comment-ca-marche" class="btn btn-ghost btn-lg">Voir comment ça marche</a>
+        </div>
+        <p class="hero-meta">Version 1.0 · Windows 10 / 11 .</p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="dash-card">
+          <div class="dash-topbar">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            <span class="dash-title">DriveFlow — Centre de Commandement Admin</span>
+          </div>
+          <img class="dash-screenshot" src="dashbord.png" alt="Tableau de bord DriveFlow montrant les segments élèves, moniteurs, véhicules, finances et les statistiques de réussite aux examens">
+        </div>
+        <div class="plate-badge">
+          <span class="plate-flag">TN</span>
+          <span class="plate-text">DF-2026</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-road" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== ROUTE / FONCTIONNALITÉS ===== -->
+  <section class="route-section" id="fonctionnalites">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-dark">SUR LA ROUTE</p>
+      <h2>Tout ce qu'il faut pour piloter<br>votre auto-école, étape par étape.</h2>
+    </div>
+
+    <div class="route-wrap">
+      <svg class="route-path" id="routePath" viewBox="0 0 200 1860" preserveAspectRatio="none" aria-hidden="true">
+        <path id="routeLine" d="M100,0 C100,120 20,150 20,270 C20,390 180,410 180,530
+          C180,650 20,670 20,790 C20,910 180,930 180,1050
+          C180,1170 20,1190 20,1310 C20,1430 180,1450 180,1570
+          C180,1690 40,1710 40,1790 C40,1820 60,1840 100,1860"
+          fill="none" stroke="#3A3F44" stroke-width="4" stroke-dasharray="2 14" stroke-linecap="round"/>
+        <g id="routeCar" transform="translate(100,0)">
+          <circle r="11" fill="#FFC530"/>
+          <path d="M-5 -1 L5 -1 L4 3 L-4 3 Z M-3 -1 L-3 -3.5 L3 -3.5 L3 -1" fill="#14171A"/>
+        </g>
+      </svg>
+
+      <ol class="stops">
+        <li class="stop">
+          <div class="stop-card">
+            <h3>Élèves &amp; moniteurs</h3>
+            <p>Gestion des profils, suivi de la progression et affectation des moniteurs à chaque candidat.</p>
+          </div>
+        </li>
+        <li class="stop stop-right">
+          <div class="stop-card">
+            <h3>Véhicules</h3>
+            <p>Suivi de la disponibilité, de la maintenance et du planning de chaque voiture du parc.</p>
+          </div>
+        </li>
+        <li class="stop">
+          <div class="stop-card">
+            <h3>Paiements &amp; finances</h3>
+            <p>Facturation automatique, suivi des impayés et intégration bancaire.</p>
+          </div>
+        </li>
+        <li class="stop stop-right">
+          <div class="stop-card">
+            <h3>Examens &amp; étapes</h3>
+            <p>Suivi des étapes de formation, enregistrement des résultats et statistiques de réussite.</p>
+          </div>
+        </li>
+        <li class="stop">
+          <div class="stop-card">
+            <h3>Calendrier &amp; planning</h3>
+            <p>Gestion des cours et des examens avec notifications automatiques en cas de conflit.</p>
+          </div>
+        </li>
+        <li class="stop stop-right">
+          <div class="stop-card">
+            <h3>Documents &amp; rapports</h3>
+            <p>Génération de PDF, archivage et export des dossiers administratifs.</p>
+          </div>
+        </li>
+        <li class="stop">
+          <div class="stop-card">
+            <h3>Notifications</h3>
+            <p>Alertes push sur le bureau et notifications par email ou SMS.</p>
+          </div>
+        </li>
+        <li class="stop stop-right">
+          <div class="stop-card">
+            <h3>Sécurité &amp; anti-piratage
+              <span class="badge-new">Reconnaissance faciale</span>
+            </h3>
+            <p>Authentification forte avec reconnaissance faciale, chiffrement des données et obfuscation du code.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== COMMENT ÇA MARCHE ===== -->
+  <section class="how" id="comment-ca-marche">
+    <div class="section-head">
+      <p class="eyebrow">TROIS ÉTAPES</p>
+      <h2>Sur la route en moins de cinq minutes.</h2>
+    </div>
+
+    <div class="how-grid">
+      <div class="how-card">
+        <span class="km-marker">KM 1</span>
+        <h3>Téléchargez le setup</h3>
+        <p>Cliquez sur « Télécharger » et enregistrez <code>AutoPilote_Setup.exe</code> sur votre ordinateur.</p>
+      </div>
+      <div class="how-card">
+        <span class="km-marker">KM 2</span>
+        <h3>Lancez l'installation</h3>
+        <p>Double-cliquez sur le fichier et suivez l'assistant. L'installation prend moins de deux minutes.</p>
+      </div>
+      <div class="how-card">
+        <span class="km-marker">KM 3</span>
+        <h3>Configurez votre auto-école</h3>
+        <p>Ajoutez vos moniteurs, vos véhicules et vos premiers élèves. Votre tableau de bord est prêt à rouler.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TÉLÉCHARGEMENT ===== -->
+  <section class="download" id="telecharger">
+    <div class="download-inner">
+      <p class="eyebrow eyebrow-dark">TÉLÉCHARGEMENT</p>
+      <h2>Installez DriveFlow sur Windows</h2>
+      <p class="download-sub">Version 1.0</p>
+
+      <div class="download-panel">
+        <div class="plate-cta">
+          <span class="plate-flag">TN</span>
+          <span class="plate-text">SETUP·EXE</span>
+        </div>
+
+        <a href="#" id="downloadBtn" class="btn btn-primary btn-xl" download>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Télécharger DriveFlow_Setup.exe
+        </a>
+
+        <ul class="download-specs">
+          <li><strong>Taille :</strong> 84 Mo</li>
+          <li><strong>Système :</strong> Windows 10 / 11 (64 bits)</li>
+          <li><strong>Licence :</strong> Essai gratuit 30 jours</li>
+        </ul>
+
+        <p id="downloadNote" class="download-note" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact-section" id="contact">
+    <div class="section-head">
+      <p class="eyebrow">RESTONS EN CONTACT</p>
+      <h2>Une question avant de démarrer ?</h2>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-avatar" aria-hidden="true">
+        <!-- Remplacez ce bloc par : <img src="logo.png" alt="DriveFlow"> -->
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="12" cy="12" r="3" fill="currentColor"/>
+          <path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="contact-info">
+        <h3>Auto École DriveFlow</h3>
+        <p class="contact-role">Support &amp; ventes</p>
+
+        <ul class="contact-list">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg>
+            <a href="mailto:contact@driveflow-app.tn">tahahamimboughanmi@gmail.com</a>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v3a2 2 0 0 1-2 2C10.5 20 4 13.5 4 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <a href="tel:+21600000000">+216 51267779</a>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.3" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span>Tunis, Tunisie</span>
+          </li>
+        </ul>
+      </div>
+
+      <a href="mailto:tahahamimboughanmi@gmail.com" class="btn btn-primary contact-btn">Nous écrire</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="contact-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#top" class="logo logo-light">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="3" fill="currentColor"/>
+            <path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        Auto École DriveFlow
+      </a>
+      <p>Le logiciel de gestion pensé pour les auto-écoles.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Produit</h4>
+      <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="#comment-ca-marche">Installation</a>
+      <a href="#telecharger">Télécharger</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:tahahamimboughanmi@gmail.com">tahahamimboughanmi@gmail.com</a>
+      <a href="tel:+21651267779">+216 51267779</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Auto École DriveFlow. Tous droits réservés.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
